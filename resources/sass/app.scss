@@ -1,0 +1,18 @@
+@import "variables";
+
+.line-through {
+    text-decoration: line-through;
+}
+
+ul {
+    list-style: none;
+}
+
+.list {
+    display: flex;
+    padding: 1rem 1.5rem;
+}
+
+.list li {
+    margin-right: 20px;
+}
