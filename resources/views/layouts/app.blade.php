@@ -34,11 +34,13 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item"><a class="nav-link" href="{{route('welcome')}}">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{route('about')}}">About Us</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{route('contact')}}">Contact Us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{route('todos.showAll')}}">Tasks List</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{route('todos.create')}}">New Task</a></li>
+
+                        @if(Auth::check())
+                            <li class="nav-item"><a class="nav-link" href="{{route('todos.showAll')}}">Tasks List</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{route('todos.create')}}">New Task</a></li>
+                        @endif
                     </ul>
 
                     <!-- Right Side Of Navbar -->
