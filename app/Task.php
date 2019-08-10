@@ -7,4 +7,19 @@ use Illuminate\Database\Eloquent\Model;
 class Task extends Model
 {
     protected $fillable=['title' , 'description' , 'completed'];
+
+    public function complete()
+    {
+        $this->update([
+            'completed' => true
+        ]);
+    }
+
+    public function incomplete()
+    {
+        $this->update([
+            'completed' => false
+        ]);
+    }
+
 }

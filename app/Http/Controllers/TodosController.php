@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class TodosController extends Controller
 {
-    public function showList()
+    public function index()
     {
 //      making just a request to the database for all tasks and then filter them into 2 array of completed and uncompleted
         $todos = Task::all()->toArray();
@@ -38,7 +38,7 @@ class TodosController extends Controller
         return view('todos.add');
     }
 
-    public function save()
+    public function create()
     {
         $data = request()->validate([
             'title'=> 'required|min:3|unique:tasks|max:255',
@@ -50,7 +50,7 @@ class TodosController extends Controller
         return  redirect(route('todos.showAll'));
     }
 
-    public function showEach(Task $todo)
+    public function show(Task $todo)
     {
         return view('todos.showEach', compact('todo'));
     }
@@ -63,13 +63,7 @@ class TodosController extends Controller
 
     public function update(Task $todo)
     {
-        if (request()->has('completed')) {
-            $todo->completed = true;
-        } else {
-            $todo->completed = false;
-        }
-
-        $todo->save();
+        request()->has('completed') ? $todo->complete($todo) : $todo->incomplete($todo);
         return redirect(route('todos.showAll'));
     }
 }

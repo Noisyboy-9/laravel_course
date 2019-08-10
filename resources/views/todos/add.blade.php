@@ -6,7 +6,7 @@
 
         <hr>
 
-        <form action="/todos/add" method="POST" class="form">
+        <form action="{{route('todos.store')}}" method="POST" class="form">
             @csrf
             <div class="form-group">
                 <label for="title" class="form__label">Title</label>
