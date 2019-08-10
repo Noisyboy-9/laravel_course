@@ -63,7 +63,7 @@ class TodosController extends Controller
 
     public function update(Task $todo)
     {
-        request()->has('completed') ? $todo->complete($todo) : $todo->incomplete($todo);
+        request()->has('completed') ? $todo->complete() : $todo->incomplete();
         return redirect(route('todos.showAll'));
     }
 }

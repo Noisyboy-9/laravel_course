@@ -24,3 +24,19 @@ Route::get('/todos/{todo}' , 'TodosController@show')->name('todos.showEach');
 Route::delete('/todos/{todo}', 'TodosController@destroy')->name('todos.delete');
 Route::patch('/todos/{todo}' , 'TodosController@update')->name('todos.update');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
