@@ -33,12 +33,12 @@ class TodosController extends Controller
         return view('todos.show',compact('completeds' , 'unCompleteds'));
     }
 
-    public function add()
+    public function create()
     {
         return view('todos.add');
     }
 
-    public function create()
+    public function store()
     {
         $data = request()->validate([
             'title'=> 'required|min:3|unique:tasks|max:255',
