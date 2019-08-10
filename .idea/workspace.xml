@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97a833b6-bcd0-4bb6-87d3-2dd160f5ccd3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/todos/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/todos/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/todos/showEach.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/todos/showEach.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -184,7 +187,9 @@
       <workItem from="1565272701814" duration="688000" />
       <workItem from="1565377265502" duration="765000" />
       <workItem from="1565378512505" duration="3037000" />
-      <workItem from="1565425868940" duration="1420000" />
+      <workItem from="1565425868940" duration="3167000" />
+      <workItem from="1565463274337" duration="1051000" />
+      <workItem from="1565464371823" duration="1367000" />
     </task>
     <servers />
   </component>
