@@ -11,6 +11,10 @@
 </head>
 <body>
 
+<style>
+
+</style>
+
     <ul class="list">
         <li><a href="{{route('welcome')}}">Home</a></li>
         <li><a href="{{route('about')}}">About Us</a></li>

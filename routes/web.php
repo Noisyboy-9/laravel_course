@@ -21,9 +21,6 @@ Route::get('/todos' , 'TodosController@index')->name('todos.showAll');
 Route::get('/todos/create' , 'TodosController@create')->name('todos.create');
 Route::post('/todos/create' , 'TodosController@store')->name('todos.store');
 Route::get('/todos/{todo}' , 'TodosController@show')->name('todos.showEach');
-
 Route::delete('/todos/{todo}', 'TodosController@destroy')->name('todos.delete');
-Route::patch('/todos/{todo}' , 'TodosCompletion@destroy')->name('todos.completion');
-Route::put('/todos/{todo}' , 'TodosCompletion@store')->name('todos.completion');
-
+Route::patch('/todos/{todo}' , 'TodosController@update')->name('todos.update');
 

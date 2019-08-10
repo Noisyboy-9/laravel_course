@@ -11,7 +11,7 @@
                     <li class="d-flex align-items-center mt-2">
                         <a href="{{route('todos.showEach',$unCompleted['id'])}}">{{$unCompleted['title']}}</a>
 
-                        <form action="{{route('todos.completion', $unCompleted['id'])}}" class="m-0 p-0" method="POST">
+                        <form action="{{route('todos.update', $unCompleted['id'])}}" class="m-0 p-0" method="POST">
                             @csrf
                             @method('patch')
                             <input id="status" type="checkbox" name="completed" class="form-check-inline ml-2" onchange="this.form.submit()">
@@ -35,17 +35,17 @@
                     <li class="d-flex align-items-center mt-2">
                         <a class="line-through" href="{{route('todos.showEach',$completed['id'])}}">{{$completed['title']}}</a>
 
-                        <form action="{{route('todos.completion', $completed['id'])}}" class="p-0 m-0" method="POST">
+                        <form action="{{route('todos.update', $completed['id'])}}" class="p-0 m-0" method="POST">
                             @csrf
-                            @method('DELETE')
+                            @method('patch')
                             <input id="status" type="checkbox" name="completed" class="form-check-inline ml-2" onchange="this.form.submit()" checked>
                         </form>
 
-{{--                        <form action="{{route('todos.delete', $completed['id'])}}" method="POST">--}}
-{{--                            @csrf--}}
-{{--                            @method('delete')--}}
-{{--                            <button type="submit" class="btn btn-danger">Delete Task</button>--}}
-{{--                        </form>--}}
+                        <form action="{{route('todos.delete', $completed['id'])}}" method="POST">
+                            @csrf
+                            @method('delete')
+                            <button type="submit" class="btn btn-danger">Delete Task</button>
+                        </form>
                     </li>
                 @endforeach
             </ul>
