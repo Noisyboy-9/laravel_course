@@ -10,7 +10,7 @@ class TodosController extends Controller
     public function index()
     {
 //      making just a request to the database for all tasks and then filter them into 2 array of completed and uncompleted
-        $todos = Task::all()->toArray();
+        $todos = auth()->user()->tasks->toArray();
 
 //        defining callbacks
         $getCompleted = function ($todo) {
@@ -18,6 +18,7 @@ class TodosController extends Controller
                 return $todo;
             }
         };
+
         $getUncompleted = function ($todo) {
             if (!$todo["completed"]) {
                 return $todo;
@@ -45,13 +46,15 @@ class TodosController extends Controller
             'description'=>'required|min:5'
         ]);
 
-        Task::create($data);
+        auth()->user()->tasks()->create($data);
 
         return  redirect(route('todos.showAll'));
     }
 
     public function show(Task $todo)
     {
+        $this->authorize('update', $todo);
+
         return view('todos.showEach', compact('todo'));
     }
 

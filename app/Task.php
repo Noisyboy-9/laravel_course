@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Task extends Model
 {
-    protected $fillable=['title' , 'description' , 'completed'];
+    protected $fillable=['title' , 'description' , 'completed' , 'owner_id'];
 
     public function complete()
     {
@@ -22,4 +22,8 @@ class Task extends Model
         ]);
     }
 
+    public function owner()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

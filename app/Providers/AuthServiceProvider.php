@@ -14,6 +14,8 @@ class AuthServiceProvider extends ServiceProvider
      */
     protected $policies = [
         // 'App\Model' => 'App\Policies\ModelPolicy',
+         'App\Task' => 'App\Policies\ManageTasksPolicy',
+
     ];
 
     /**
@@ -25,6 +27,11 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        //
+        Gate::before(function () {
+            if (auth()->id() === 1) {
+                return true;
+            }
+        });
+
     }
 }
