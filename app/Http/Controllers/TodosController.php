@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\TaskCreated;
 use App\Task;
 use Illuminate\Http\Request;
 
@@ -41,12 +42,14 @@ class TodosController extends Controller
 
     public function store()
     {
-        $data = request()->validate([
+        $attributes  = request()->validate([
             'title'=> 'required|min:3|unique:tasks|max:255',
             'description'=>'required|min:5'
         ]);
 
-        auth()->user()->tasks()->create($data);
+        $task = auth()->user()->tasks()->create($attributes);
+
+        event(new TaskCreated($task));
 
         return  redirect(route('todos.showAll'));
     }
