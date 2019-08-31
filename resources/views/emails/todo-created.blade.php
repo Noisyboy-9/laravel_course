@@ -12,3 +12,4 @@ See Tasks
 Thanks,<br>
 {{ config('app.name') }}
 @endcomponent
+

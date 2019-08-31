@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97a833b6-bcd0-4bb6-87d3-2dd160f5ccd3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/VerificationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/VerificationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TodosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TodosController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Listeners/SendTaskCreatedEmailNotification.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Listeners/SendTaskCreatedEmailNotification.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/todos/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/todos/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/emails/todo-created.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/emails/todo-created.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
