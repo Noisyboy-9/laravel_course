@@ -1,6 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
+    @if(session('message'))
+    <div class="alert alert-danger">
+        {{session('message')}}
+    </div>
+    @endif
     <div class="d-flex">
         <div class="flex-grow-1">
 

@@ -6,6 +6,7 @@ use App\Mail\TaskCreatedMail;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Support\Facades\Mail;
+use mysql_xdevapi\Exception;
 use PharIo\Manifest\Email;
 
 class SendTaskCreatedEmailNotification
@@ -28,6 +29,6 @@ class SendTaskCreatedEmailNotification
      */
     public function handle($event)
     {
-        Mail::to($event->task->owner->email)->send(new TaskCreatedMail($event->task));
+
     }
 }

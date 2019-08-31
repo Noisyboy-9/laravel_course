@@ -1,5 +1,7 @@
 <?php
 // simple static pages
+use Illuminate\Routing\Route;
+
 Route::get('/', 'PagesController@welcome')->name('welcome');
 Route::get('/contact', 'PagesController@contact')->name('contact');
 Route::get('/about', 'PagesController@about')->name('about');
@@ -18,3 +20,4 @@ Route::middleware(['auth'])->group(function () {
 //AUTH
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/profile', 'ProfileController@index');

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Events\TaskCreated;
 use App\Task;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class TodosController extends Controller
 {
@@ -48,8 +49,6 @@ class TodosController extends Controller
         ]);
 
         $task = auth()->user()->tasks()->create($attributes);
-
-        event(new TaskCreated($task));
 
         return  redirect(route('todos.showAll'));
     }
