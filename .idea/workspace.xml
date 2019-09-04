@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97a833b6-bcd0-4bb6-87d3-2dd160f5ccd3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/views/emails/todo-created.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/emails/todo-created.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -238,6 +239,8 @@
       <workItem from="1567184345175" duration="2874000" />
       <workItem from="1567189160052" duration="2125000" />
       <workItem from="1567243342084" duration="664000" />
+      <workItem from="1567332769410" duration="25000" />
+      <workItem from="1567614802199" duration="53000" />
     </task>
     <servers />
   </component>

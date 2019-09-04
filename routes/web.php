@@ -1,6 +1,5 @@
 <?php
 // simple static pages
-use Illuminate\Routing\Route;
 
 Route::get('/', 'PagesController@welcome')->name('welcome');
 Route::get('/contact', 'PagesController@contact')->name('contact');
